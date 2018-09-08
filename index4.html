@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 4 Project Survey Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="cssstyle.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  
+  <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+        body,html{
+          font-family: 'Raleway', Helvetica, sans-serif;
+        }
+      </style>
+</head>
+<body>
+        
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                  <a class="navbar-brand" href="#">Hidden brand</a>
+                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+              
+    <!--Form Layout-->
+    <h1 id="title" class="display-4 text-center" style="color:rgb(236, 76, 13);">Survey Form</h1>
+    
+
+    <div class="container center-block text-dark">
+
+            <form action="/html/tags/html_form_tag_action.cfm" role="form"  id="survey-form" class="bg-light rounded p-4">
+        
+
+            <p id="description" class="text-center pt-2 pb-2">Let us know how we can improve FreeCodeCamp</p>
+            <!--Input Section-->
+            
+            <div class="form-group row">
+                
+               <label for="first_name" class="col-sm-4 col-form-label" id="name">* Name:</label>
+          
+            <div class="col-sm-6">
+            <input type="text" class="form-control form-control-sm" id="first_name" id="name-label" name="name" placeholder="Enter Full Name" required>
+            </div>
+            </div>
+
+            <div class="form-group row">
+            <label for="last_name" class="col-sm-4 col-form-label" id="email2">* Email:</label>
+            <div class="col-sm-6">
+            <input type="text" class="form-control form-control-sm" id="email" id="email-label" name="email" placeholder="Enter your Email" required>
+            </div>
+            </div>
+
+            <div class="form-group row">
+                    <label for="age" class="col-sm-4 col-form-label" id="ageMove">* Age:</label>
+                    <div class="col-sm-6">
+                    <input type="number" min="12" max="120" class="form-control form-control-sm" id="age" name="age" placeholder="Age" required>
+                    </div>
+           </div>
+            <!--INPUT SEC. END-->
+
+
+            <!--SELECT SECTION START-->
+           <div class="form-group row">
+                
+                <label for="dropdown" class="col-form-label col-sm-4">Which option best describes your current role?</label>
+                
+                <select class="form-control form-control-sm col-sm-4 mr-2 mt-2" id="dropdown">
+                        <option id="dropdown" disabled>Select An Option</option>
+                        <option>Student</option>
+                        <option>Full Time Job</option>
+                        <option>Full Time Learner</option>
+                        <option>Prefer Not To Say</option>
+                        <option>Other</option>
+                </select>
+               
+            </div>
+            <!--SELECT SEC. END-->
+
+
+            <!--RADIO BUTTON SECTION-->
+
+            <div class="form-group">
+                    <div class="row mt-3">
+
+                    <label class="col-form-label col-sm-4">
+                            * How likely is that you would recommend freeCodeCamp to a friend?  
+                    </label>
+
+                    <div class="col-sm-8">
+
+                    <div class="form-check">
+                    <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="legendRadio" id="legendRadio1" value="1">
+                    Definitely
+                    </label>
+                    </div>
+
+                    <div class="form-check">
+                    <label class="form-check-label ">
+                    <input class="form-check-input" type="radio" name="legendRadio" id="legendRadio2" value="2">
+                    Maybe
+                    </label>
+                    </div>
+
+                    <div class="form-check">
+                    <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="legendRadio" id="legendRadio3" value="3">
+                    Not Sure
+                    </label>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!--RADIO BUTTON SECTION END-->
+
+
+        <div class="form-group form-row">
+                        
+                <label for="dropdown2" class="col-form-label col-sm-4">What do you like most in FCC :</label>
+                        
+                <select class="form-control form-control-sm col-sm-4 mr-2" id="dropdown" id="dropdown2">
+                        <option disabled>Select An Option</option>
+                        <option>Challanges</option>
+                        <option>Project</option>
+                        <option>Community</option>
+                        <option>Open Source</option>    
+                </select>
+                       
+                 </div>
+
+                <!--BUTTON SUBMIT-->
+
+
+                <!--CHECK-BOX-->
+
+                <div class="form-group">
+                        <div class="row mt-3">
+                        <label class="col-form-label col-sm-4">* Things that should be improved in the future (Check all that apply):</label>
+                        
+                        <div class="col-sm-8 pt-3 mb-2">
+
+                        <div class="form-check">
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="legendRadio" id="legendRadio1" value="1">
+                        Front-End Projects
+                        </label>
+                        </div>
+
+                        <div class="form-check">
+                        <label class="form-check-label text-right">
+                        <input class="form-check-input" type="checkbox" name="legendRadio" id="legendRadio2" value="2">
+                        Back-End Projects
+                        </label>
+                        </div>
+
+                        <div class="form-check">
+                        <label class="form-check-label text-right">
+                        <input class="form-check-input" type="checkbox" name="legendRadio" id="legendRadio3" value="3">
+                        Data Visualization
+                        </label>
+                        </div>
+
+                        <div class="form-check">
+                                <label class="form-check-label text-right">
+                                <input class="form-check-input" type="checkbox" name="legendRadio" id="legendRadio2" value="4" >
+                                Challanges
+                                </label>
+                        </div>
+
+                        <div class="form-check">
+                                <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="legendRadio" id="legendRadio2" value="5" >
+                                Open Source Community
+                                </label>
+                        </div>
+
+                        <div class="form-check">
+                                <label class="form-check-label text-right">
+                                <input class="form-check-input" type="checkbox" name="legendRadio" id="legendRadio2" value="6" >
+                                Glitter Help Room
+                                </label>
+                        </div>
+
+                        <div class="form-check">
+                                <label class="form-check-label text-right">
+                                <input class="form-check-input" type="checkbox" name="legendRadio" id="legendRadio2" value="7" >
+                                Videos
+                                </label>
+                        </div>
+                        <div class="form-check">
+                                <label class="form-check-label text-right">
+                                <input class="form-check-input" type="checkbox" name="legendRadio" id="legendRadio2" value="8" >
+                                City Meetups
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                                <label class="form-check-label text-right">
+                                <input class="form-check-input" type="checkbox" name="legendRadio" id="legendRadio2" value="9">
+                                Wiki
+                            </label>
+                        </div>
+                        <div class="form-check">
+                                <label class="form-check-label text-right">
+                                <input class="form-check-input" type="checkbox" name="legendRadio" id="legendRadio2" value="10" >
+                                Forums
+                            </label>
+                        </div>
+                        <div class="form-check">
+                                <label class="form-check-label text-right">
+                                <input class="form-check-input" type="checkbox" name="legendRadio" id="legendRadio2" value="11" >
+                                Additional Courses
+                            </label>
+                        </div>
+
+                        </div>
+                        </div>
+                        </div>
+                
+                        
+                <!--TEXT_AREA-->
+                <div class="form-group row justify-content-left">
+                    <label for="comment" class="col-form-label col-sm-4">Any Comments or Suggestions?</label>
+
+                    <textarea class="col-sm-6 form-control form-control-sm text-muted" id="area">Enter your comment here. . .</textarea>
+                    
+                </div>        
+                    
+                
+
+                <div class="form-group row justify-content-center">
+                        <div class="offset-4 col-sm-8">
+                        <button type="submit" id="submit" class="btn btn-primary btn-sm p-2 mb-2">Submit</button>
+                        </div>
+                </div>
+
+                <!--BUTTON SUBMIT END-->
+            
+            </form>
+            </div>
+  
+</body>
+</html>
+
